@@ -6,7 +6,7 @@ import Reactividad from './components/reactividad/Reactividad';
 import Arreglos from './components/arreglos/Arreglos';
 import Operador from './components/operador-ternario/Operador';
 import Formularios from './components/formularios/Formularios';
-
+import ValidacionFormularios from './components/validacion-formularios/validacionFormularios';
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <Operador />
       <Arreglos />
       <Formularios />
+      <ValidacionFormularios/>
     </div>
   );
 }
