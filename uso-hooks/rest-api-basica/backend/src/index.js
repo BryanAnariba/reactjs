@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 require('./DB.connection');
 const userRoutes = require('./routes/User.routes');
 const taskRoutes = require('./routes/Task.routes');
+const roleRoutes = require('./routes/roles.routes');
 
 // Settings
 app.set('port' , process.env.PORT || 3500);
@@ -18,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.use('/users' , userRoutes);
 app.use('/tasks' , taskRoutes);
+app.use('/roles' , roleRoutes);
 
 // Starting server
 app.listen(app.get('port') , () => {

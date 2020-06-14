@@ -7,7 +7,6 @@ import { BrowserRouter as Router , Switch , Route } from 'react-router-dom';
 import About from './components/about/About';
 import Nabvar from './components/nabvar/Nabvar';
 import User from './components/users/User';
-import Task from './components/tasks/Task';
 import Landing from './components/small-landing/Landing';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
           <Route exact path='/' component={ Landing }/>
           <Route exact path="/about" component={ About } />
           <Route exact path="/users" component={ User } />
-          <Route exact path="/tasks" component={ Task } />
         </Switch>
       </div>
     </Router>
