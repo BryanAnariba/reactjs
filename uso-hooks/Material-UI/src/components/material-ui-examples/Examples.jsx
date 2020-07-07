@@ -2,7 +2,31 @@ import React , { Fragment } from 'react';
 import { Button  , IconButton , Typography} from '@material-ui/core';
 import DeleteForeverSharpIcon from '@material-ui/icons/DeleteForeverSharp';
 import SaveIcon from '@material-ui/icons/Save';
+import { makeStyles , ThemeProvider} from '@material-ui/core/Styles';
+import Theme  from '../../temas-configurados';
+
+
+const useStyle = makeStyles({
+    botonPersonalizado: {
+        background: 'linear-gradient(45deg , #FE6B8B 30% , #FF8E53 90%)' ,
+        border: '2px solid blue' ,
+        borderRadius: 5 ,
+        boxShadow: '0 3px 5px 2px rgba(255,105,135,0.3)' ,
+        color: 'white' ,
+        height: 50 ,
+        padding: '0 30px'
+    } , 
+    btn_Log: {
+        borderRadius: 12 ,
+        background: 'rgba(0,36,132)' ,
+        color: 'white' ,
+        boxShadow: '0 3px 5px 2px rgba(255,105,135,0.3)'  ,
+        padding: '0 30px' ,
+        height: 50 
+    }
+})
 const Examples = () => {
+    const classes = useStyle();
     return ( 
         <Fragment>
             <h2>--------------------------------------Botones e iconos--------------------------------------</h2>
@@ -56,6 +80,33 @@ const Examples = () => {
             <Typography variant="h6" color="secondary" align="center">Este es un titulo h6</Typography>
             <Typography variant="h6" color="secondary" align="left" paragraph>Este es un titulo h6</Typography>
             <Typography variant="h6" color="secondary" align="right">Este es un titulo h6</Typography>
+
+            {  /* Haciedo estilos css en un boton */ }
+            <p></p>
+            
+            <h2>Estilos Personalizados con CSS</h2>
+            <Button className={ classes.botonPersonalizado }>
+                Boton con estilos hechos en css
+            </Button>
+
+            <Button className={ classes.botonPersonalizado }>
+                Boton Personalizado 2
+            </Button>
+            <Button className={ classes.btn_Log }>
+                Boton Personalizado 2
+            </Button>
+
+            <p></p>
+            <h2>Globals ---- hacer efecto :hover a botones con Material UI</h2>
+            <ThemeProvider theme={ Theme }>
+                <Button variant="contained" color="primary">
+                    Boton Primario
+                </Button>
+
+                <Button variant="contained" color="secondary">
+                    Boton Secundario
+                </Button>
+            </ThemeProvider>
         </Fragment>
     );
 }
