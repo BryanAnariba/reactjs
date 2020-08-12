@@ -1,0 +1,11 @@
+Primero => Instalar dependencias dentro de cada carpeta, sea frontend y backend con el comando
+    -> npm install
+
+Segundo => Ejecutar los tres servidores tanto de frontend , backend y mongo client con los comandos siguientes dentro de las carpetas
+    En backend
+        -> npm start
+    En frontend
+        -> npm start
+    En mongo client si lo tiene como servicio
+        En Windows-> mongod 
+        En linux-> sudo service mongod start 

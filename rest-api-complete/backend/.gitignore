@@ -1,0 +1,4 @@
+#Dependencias a no subir
+/node_modules
+
+#/.env
