@@ -29,6 +29,18 @@ function App() {
   // Declarando estado
   const [ click , setClick ] = useState(0);
   const [ isAactive , setIsActive ] = useState(false);
+  const [ clicks , setClicks ] = useState(0);
+  const [ title, setTitle ] = useState('');
+
+  // Manejando un estado con objetos
+  const addNewClickToObjetData = () => {
+    setClicks(clicks + 1);
+  }
+  const handleInput = (e) => {
+    setTitle(e.target.value);
+    console.log(title);
+  }
+  
 
   // Aumentando en uno al dar click con setClick, establecemos nuevo valor
   const addNewClick = () => {
@@ -63,7 +75,18 @@ function App() {
 
 
       <h2>Use State con Objetos</h2>
-
+      <section>
+        <h4>Clicks almacenado en el objeto: { clicks }</h4>
+        <h4>Title almacenado en el objeto: { title }</h4>
+        <input 
+          type="text" 
+          placeholder="Lo que escribas aqui se guardada en el estado como objeto"
+          onChange={ handleInput }
+          value={ title } />
+        <button onClick={ addNewClickToObjetData }>
+          Click Me
+        </button>
+      </section>
     </div>
   );
 }
