@@ -1,4 +1,6 @@
 import React , { Fragment, useContext} from 'react';
+
+// Importamos el userContext antes de usarlo
 import userContext from '../../contexts/UserContext';
 
 import './Nabvar.css';
@@ -7,11 +9,8 @@ const NabvarComponent = () => {
 
     //Como consumir el CONTEXT AQUI en este componente
     const { user , logIn , logOut } = useContext(userContext);
-    
-    const dataUser = user;
+    console.log('Se recargo el componente narbvar');
 
-    const users = { name: dataUser }
-    
     return ( 
         <Fragment>
             <nav className="nabvar navbar-dark bg-dark">
@@ -21,7 +20,7 @@ const NabvarComponent = () => {
                             <h2>
                                 {
                                     // si el usuario existe decir hola usuario, si no bienvenid@
-                                    user ? `Context API: Hola ${ users.name }` : 'Bienvenid@'
+                                    user ? `Context API: Hola ${ user.name }` : 'Bienvenid@'
                                 }
                             </h2>
                         </span>
@@ -29,13 +28,13 @@ const NabvarComponent = () => {
                     <div className="grilla-dos">
                         {
                             // Si existe usuario que indique cerrar sesion , si no existe iniciar sesion
-                            user 
+                            user
                             ?
-                                <button className="btn btn-outline-warning">
+                                <button className="btn btn-outline-warning" onClick={ logOut }>
                                     Cerrar Sesion
                                 </button>   
                             :
-                                <button className="btn btn-outline-primary">
+                                <button className="btn btn-outline-primary" onClick={ logIn }>
                                     Iniciar Sesion
                                 </button>
                         }

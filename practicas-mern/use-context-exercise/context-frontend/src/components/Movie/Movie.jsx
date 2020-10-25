@@ -1,7 +1,14 @@
-import React , { Fragment } from 'react';
+import React , { Fragment , useContext} from 'react';
 
+import userContext from '../../contexts/UserContext';
 const MovieComponent = ({ movie }) => {
+    const { user , toggleFavoriteMovieToUser } = useContext(userContext);
+
+    console.log('Se recargo el componente Movie');
     //
+    //Como consumir el CONTEXT AQUI en este componente
+    //const { user , logIn , logOut } = useContext(userContext);
+
     const imgStyles = {
         height: '260px'  ,
         objectFit: 'cover' ,
@@ -9,7 +16,7 @@ const MovieComponent = ({ movie }) => {
     }
 
     // 
-    const isFavorite = true;
+    const isFavorite = user?.favoriteMovies?.includes(movie.id);
     return ( 
         <Fragment>
             <div className="card">
@@ -23,10 +30,14 @@ const MovieComponent = ({ movie }) => {
                     <h4>
                         { movie.title }
                     </h4>
-                    <button 
-                        className={`btn ${ isFavorite ? 'btn-success' : 'btn-danger' }`}>
+                    {
+                        user?.id &&
+                        <button 
+                        className={`btn ${ isFavorite ? 'btn-success' : 'btn-danger' }`} 
+                        onClick={ () => toggleFavoriteMovieToUser(movie.id) }>
                             Favorito
-                    </button>
+                        </button>
+                    }
                 </div>
             </div>
         </Fragment>
