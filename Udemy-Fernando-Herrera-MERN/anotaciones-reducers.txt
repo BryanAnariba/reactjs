@@ -1,0 +1,37 @@
+Que es:
+    - Es una funcion comun y corriente, no puede ser asincrona.
+
+        const myReducer = () => {
+
+        }
+        
+    - Debe ser una funcion pura, lo que la funcion realice debe ser de manera interna.
+        -> no debe tener efectos secundarios, esto quiere decir que la funcion myReducer debe resolver todo lo que se le pide sin necesidad de involucrar otras funciones
+
+    - Debe retornar siempre un nuevo state
+        -> No se debe mutar nunca el estado
+        -> No debe llamar al localStorage o sessionStorage, aunque son sincronas dichas funciones pues viola la regla de ser una funcion pura ya que estariamos llamando otras funciones, localStorage y sessionStorafe dentro del myReducer
+
+    - Usualmente recibe dos argumentos
+        -> Estado inicial
+        -> La accion que queremos ejecutar, ojo no debe requerir mas de una accion que pueda tener un argumento
+
+Ejemplo
+// estado inicial
+
+    const initialTodos = [{
+        id: 1,
+        todo: 'Compra pan',
+        donde: false
+    }];
+
+// Reducer
+
+    const todoReducer = (
+        state = initialTodos,
+        action
+    ) => {
+        return state;
+    }
+
+
