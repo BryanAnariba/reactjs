@@ -8,7 +8,8 @@ import React from 'react'
 // import { UseMemo } from './components/06-Use-Memo/UseMemo';
 // import { MemoHook } from './components/06-Use-Memo/MemoHook';
 // import { CallBackHook } from './components/06-Use-Memo/CallBackHook';
-import { Padre } from './components/07-tarea-memo/Padre';
+// import { Padre } from './components/07-tarea-memo/Padre';
+import { TodoApp } from './components/08-useReducer/TodoApp';
 export const HookApp = () => {
     return (
         <div>
@@ -19,8 +20,10 @@ export const HookApp = () => {
             <FocusScreen />
             <UseMemo />
             <MemoHook /> 
-            <CallBackHook />*/}
-            <Padre />
+            <CallBackHook />
+            <Padre />*/}
+            <TodoApp/>
         </div>
     )
 }
+
