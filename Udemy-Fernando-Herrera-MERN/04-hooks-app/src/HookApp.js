@@ -1,4 +1,5 @@
 import React from 'react'
+import { Main } from './components/09-useContext/Main'
 // import { CounterApp } from './components/01-useState/CounterApp';
 // import { CounterWithCustomHook } from './components/01-useState/CounterWithCustomHook';
 // import { SimpleForm } from './components/02-UseEffect/SimpleForm';
@@ -9,7 +10,11 @@ import React from 'react'
 // import { MemoHook } from './components/06-Use-Memo/MemoHook';
 // import { CallBackHook } from './components/06-Use-Memo/CallBackHook';
 // import { Padre } from './components/07-tarea-memo/Padre';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+
+
+
+// Use Reducer importante
+//import { TodoApp } from './components/08-useReducer/TodoApp';
 export const HookApp = () => {
     return (
         <div>
@@ -22,7 +27,10 @@ export const HookApp = () => {
             <MemoHook /> 
             <CallBackHook />
             <Padre />*/}
-            <TodoApp/>
+            
+            
+            {/*<TodoApp/>*/}
+            <Main />
         </div>
     )
 }
