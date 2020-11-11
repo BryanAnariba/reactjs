@@ -1,0 +1,9 @@
+Que es redux:
+    Es un contenedor predecible del estado de nuestra aplicacion
+    controla donde esta la informacion de la aplicacion en todo momento 
+    y hace que su modificacion sea en una sola via.
+
+
+Pilares de redux
+    store: es donde se encuentra la informacion que los componentes consumiran, es como un supermercado
+    donde cosumen productos, voy al store cuando necesito informacion sobre algo.
