@@ -1,2 +1,0 @@
-Seccion 5 -> Inicios de testing
-Seccion 8 -> testing para la aplicacion de gifExpert
