@@ -1,0 +1,4 @@
+Que es un reducer 
+    =>  - Es una funcion comun y corriente, no debe ser asincrona
+        - Debe ser una funcion pura, todo lo que la funcion realice debe hacerse en dicha funcion
+        - Debe retornar un nuevo estado
