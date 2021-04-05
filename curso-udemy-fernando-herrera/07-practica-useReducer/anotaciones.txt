@@ -1,4 +1,18 @@
 Que es un reducer 
     =>  - Es una funcion comun y corriente, no debe ser asincrona
-        - Debe ser una funcion pura, todo lo que la funcion realice debe hacerse en dicha funcion
+        - Debe ser una funcion pura, todo lo que la funcion realice debe hacerse dentro de dicha funcion
         - Debe retornar un nuevo estado
+        - Recibe dos parametros (estadoInicial, accionARealizar)
+
+ej reducer => 
+    const initialTodo = [];
+    const todoReducer = (state = initialTodo, action) => {
+        return state;
+    }
+
+
+useState y useReducer se usan para lo mismo
+
+useReducer es una alternativa al useState
+
+La diferencia recae en la cantidad de cosas al manejar un estado,
