@@ -1,0 +1,11 @@
+Hay casos en los que es necesario usar context, dichos casos son cuando no hay conexion entre un componente con otro
+
+    POR EJEMPLO
+        Una pantalla que contiene cards, dicha pantalla que engloba las cards es un componente y las cards son otro componente
+        en ese caso se hace un mapeo de la imformacion y se manda por medio de props la informacion para pintar informacion en las cards
+        <myCards data={ cardData }/>
+
+
+pero en caso de un login y pantalla de usuario no hay relacion como tal o comunicacion como componentes debido a que solo si y solo si el 
+usuario se loguea correctamente puede llegar a ver la pantalla de usuario con los datos propios del usuario, en este caso si es necesario usar 
+context que consiste en crear un puente en el nivel mayor superior posible, casi siempre es el App.js el cual engloba los demas componentes 
