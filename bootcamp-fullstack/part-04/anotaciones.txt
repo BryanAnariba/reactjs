@@ -1,0 +1,4 @@
+aqui se vera el contenido del video 3
+    Estado del componente
+    Renderizado condicional
+    Eventos
