@@ -1,4 +1,0 @@
-Esta es una rest api en react con laravel y mysql
-
--> El codigo del backend esta en la carpeta htdocs en curso-laravel/api-rest-practices/03-users-api
--> Este aplicativo ira con Reducers y hooks basicos
