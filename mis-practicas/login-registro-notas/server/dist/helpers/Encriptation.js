@@ -8,23 +8,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const Server_1 = __importDefault(require("./Server"));
-const Connection_1 = require("./database/Connection");
-const server = new Server_1.default();
-const connection = new Connection_1.Connection;
-function main() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield server.listen();
-            yield connection.connectMe();
-        }
-        catch (e) {
-            console.log(e);
-        }
-    });
-}
-main();
+exports.verifyPassword = exports.hashedPassword = void 0;
+const bcrypt_1 = require("bcrypt");
+const hashedPassword = (password) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const salt = yield bcrypt_1.genSalt(10);
+        return yield bcrypt_1.hashSync(password, salt);
+    }
+    catch (error) {
+        return error;
+    }
+});
+exports.hashedPassword = hashedPassword;
+const verifyPassword = (password, hashedPassword) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        return yield bcrypt_1.compareSync(password, hashedPassword);
+    }
+    catch (error) {
+        return false;
+    }
+});
+exports.verifyPassword = verifyPassword;
