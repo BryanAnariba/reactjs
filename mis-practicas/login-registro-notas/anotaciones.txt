@@ -40,3 +40,9 @@ Pasos para montar un servidor basico en typescript
 EN FRONTEND
     REDUX: PARA TENER UN ESTADO GLOBAL DE LA APLICACION, CADA VEZ QUE OCUPEMOS INFORMACION IREMOS AL STADO A RECOGER COMO IR A UN SUPERMERCADO
     REDUX THUNK: ES UN MIDDLEWARE PARA LOS REDUCERS EN UN DISPATCH PARA QUE SE EJECUTE ASYNCRONAMENTE YA QUE LOS REDUCERS SOLO ADMITEN FUNCIONES PURAS
+
+Modulos instalados e nel FRONTEND
+    npm i redux redux-thunk react-router-dom react-redux
+    npm install react-hook-form
+    npm install react-bootstrap bootstrap
+
