@@ -20,3 +20,24 @@ export const NoteReducer = ( state = [], action ) => {
             return state;
     }
 }
+
+// Actions creators
+export const actionCreateNote = (content) => {
+    return {
+        type: '@note/add',
+        payload: {
+            _id: new Date(),
+            content: content,
+            important: false
+        }
+    };
+}
+
+export const actionToggleImportant = (_id) => {
+    return {
+        type: '@note/toggle_important',
+        payload: {
+            _id: _id
+        }
+    };
+}
