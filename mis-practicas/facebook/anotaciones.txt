@@ -1,5 +1,0 @@
-Ejercicio Hecho con el stack
-	MYSQL
-	PHP
-	Reactjs
-	
